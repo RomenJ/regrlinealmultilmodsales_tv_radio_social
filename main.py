@@ -44,7 +44,7 @@ def plot_predictions_vs_actual(y_test, y_pred, title):
     sns.set_style("whitegrid")
     sns.scatterplot(x=y_test, y=y_pred)
     for i in range(len(y_test)):
-     plt.plot([y_test[i], y_test[i]], [y_test[i], y_pred[i]], '-', color='blue', alpha=0.2)
+        plt.plot([y_test[i], y_test[i]], [y_test[i], y_pred[i]], '-', color='blue', alpha=0.2)
     plt.plot([min(y_test), max(y_test)], [min(y_test), max(y_test)], '--', color='red')
     plt.title(title)
     plt.xlabel('Valores Reales')
@@ -84,7 +84,7 @@ def main():
     plt.title('Suma de Valores por Variable')
     plt.xlabel('Variable')
     plt.ylabel('Suma')
-    plt.xticks(rotation=45)
+    plt.xticks(rotation=45, ha='right')
 
     # Agregar etiquetas en las barras
     for index, row in sum_df.iterrows():
@@ -124,3 +124,4 @@ def main():
     
 if __name__ == "__main__":
     main()
+
